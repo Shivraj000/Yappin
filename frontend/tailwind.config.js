@@ -1,7 +1,10 @@
-import tailwindcss from '@tailwindcss/vite'
-import { defineConfig } from 'vite'
-export default defineConfig({
-  plugins: [
-    tailwindcss(),
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
-})
+  theme: {
+    extend: {},
+  },
+  plugins: [require("daisyui")],
+}
