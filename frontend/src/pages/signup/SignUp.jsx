@@ -28,7 +28,7 @@ const SignUp = () =>{
     <h1 className="text-2xl sm:text-3xl font-semibold text-center text-white drop-shadow-md">
       Sign Up
      <span
-  className="bg-gradient-to-r from-blue-600 via-teal-500 via-emerald-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent font-extrabold"
+  className="bg-gradient-to-r from-purple-700 via-pink-500 via-red-500 via-orange-400 to-yellow-300 bg-clip-text text-transparent font-black drop-shadow-lg"
   style={{
     WebkitTextStroke: '1.5px black',
   }}

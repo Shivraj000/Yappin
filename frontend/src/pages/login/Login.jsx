@@ -18,12 +18,15 @@ const Login =() =>{
   return (
 	
         <div className="flex flex-col items-center justify-center w-full max-w-sm mx-auto min-h-screen">
+			
   <div className="w-full p-6 rounded-xl shadow-2xl bg-white/10 border border-white/20 backdrop-blur-lg transition-all duration-300 hover:shadow-blue-500/40 hover:scale-105">
   
     <h1 className="text-3xl font-semibold text-center text-white drop-shadow-md">
       Login
 <span
-  className="bg-gradient-to-r from-blue-600 via-teal-500 via-emerald-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent font-extrabold"
+	className="bg-gradient-to-r from-purple-700 via-pink-500 via-red-500 via-orange-400 to-yellow-300 bg-clip-text text-transparent font-black drop-shadow-lg"
+
+
   style={{
     WebkitTextStroke: '1.5px black',
   }}

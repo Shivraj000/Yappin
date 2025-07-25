@@ -5,6 +5,7 @@ import MessageInput from './MessageInput';
 import { TiMessages } from "react-icons/ti";
 import useConversation from '../../zustand/useConversation';
 import { useAuthContext } from '../../context/AuthContext';
+import { IoMdArrowRoundBack } from "react-icons/io";
 const MessageContainer = () => {
 	const { selectedConversation, setSelectedConversation } = useConversation();
 
@@ -14,7 +15,7 @@ const MessageContainer = () => {
 	}, [setSelectedConversation]);
 
 	return (
-		<div className='md:min-w-[450px] flex flex-col'>
+		<div className='flex flex-col flex-1 w-full sm:min-w-[450px] h-full'>
 			{!selectedConversation ? (
 				<NoChatSelected />
 			) : (
@@ -24,6 +25,18 @@ const MessageContainer = () => {
 						<span className='label-text'>To:</span>{" "}
 						<span className='text-white font-bold'>{selectedConversation.fullName}</span>
 					</div>
+					{selectedConversation && (
+  <div className="sm:hidden flex items-center gap-2 bg-slate-600 text-white px-4 py-2">
+    <button
+      onClick={() => setSelectedConversation(null)}
+      className="text-white font-bold text-lg"
+    >
+		<IoMdArrowRoundBack />
+    </button>
+    
+  </div>
+)}
+
             <Messages/>
             <MessageInput/>
         
@@ -44,7 +57,7 @@ const NoChatSelected = () => {
 
 				<p className="text-4xl">Welcome  to</p>
         <p
-  className="text-4xl bg-gradient-to-r from-blue-600 via-teal-500 via-emerald-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent font-extrabold"
+  className="text-4xl bg-gradient-to-r from-purple-700 via-pink-500 via-red-500 via-orange-400 to-yellow-300 bg-clip-text text-transparent font-black drop-shadow-lg"
   style={{
     WebkitTextStroke: '1.5px black',
   }}
@@ -52,11 +65,12 @@ const NoChatSelected = () => {
   &nbsp; Yappin
 </p>
 
-                <p>{authUser.fullName} ❄</p>
+                <p>{authUser.fullName} 👋</p>
 
 				<p>Select a chat to start messaging</p>
 				<TiMessages className='text-3xl md:text-6xl text-center' />
 			</div>
 		</div>
+		
 	);
 };
