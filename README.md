@@ -29,28 +29,28 @@
 
 ## 📁 Folder Structure
 
-Yappin/
+📁 Yappin
+├── 📂 backend
+│   ├── 📂 controllers       # Auth, Message, User controllers
+│   ├── 📂 db                # MongoDB connection
+│   ├── 📂 middleware        # JWT & auth middleware
+│   ├── 📂 models            # Mongoose schemas
+│   ├── 📂 routes            # Express route handlers
+│   ├── 📂 socket            # Socket.IO server config
+│   └── 📄 server.js         # Main backend entry
 │
-├── backend/
-│ ├── controllers/ # Auth, Message, User controllers
-│ ├── db/ # MongoDB connection
-│ ├── middleware/ # JWT & auth middleware
-│ ├── models/ # Mongoose schemas
-│ ├── routes/ # Express route handlers
-│ ├── socket/ # Socket.IO server config
-│ └── server.js # Main backend entry
+├── 📂 frontend
+│   ├── 📂 public
+│   └── 📂 src
+│       ├── 📂 components    # Chat UI, Message input, Sidebar
+│       ├── 📂 context       # Auth context
+│       ├── 📂 hooks         # Custom hooks like useLogin/useSignup
+│       ├── 📂 pages         # Login, Signup, Home
+│       ├── 📂 zustand       # Zustand store (useConversation)
+│       └── 📄 App.jsx       # Main routing component
 │
-├── frontend/
-│ ├── public/
-│ └── src/
-│ ├── components/ # Chat UI, Message input, Sidebar
-│ ├── context/ # Auth context
-│ ├── hooks/ # Custom hooks like useLogin, useSignup
-│ ├── pages/ # Login, Signup, Home
-│ ├── zustand/ # Zustand store (useConversation)
-│ └── App.jsx # Main routing component
-│
-├── .env # Environment variables
-├── package.json # Root-level dependencies and scripts
-├── README.md # Project documentation
-└── vite.config.js # Vite build config
+├── 📄 .env                  # Environment variables
+├── 📄 package.json          # Project metadata & scripts
+├── 📄 vite.config.js        # Vite config for frontend build
+└── 📄 README.md             # Project documentation
+
